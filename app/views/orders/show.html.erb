@@ -2,8 +2,21 @@
 
   <header class="page-header">
     <h1>Order #<%= @order.id %></h1>
+    <h1>Order email <%=@order.email %></h1>
+    <h1>Order amount <%=@order.total_cents/100 %></h1>
   </header>
-
+  <h2>Order details</h2>
+  <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @order.line_items %>
+      </tbody>
+    </table>
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>
   </div>
