@@ -1,4 +1,5 @@
-class Admin::CategoriesController < ApplicationController
+require_relative 'admin_controller'
+class Admin::CategoriesController < Admin::AdminController
   def new
     @category=Category.new
   end
