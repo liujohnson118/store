@@ -1,5 +1,13 @@
-<h1>UserMailer#order_confirmation</h1>
-
-<p>
-  <%= @greeting %>, find me in app/views/user_mailer/order_confirmation.html.erb
-</p>
+<section >
+<table class="table table-bordered">
+      <thead>
+        <tr>
+          <th colspan="2">Item</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+      <%= render @line_items %>
+      </tbody>
+      </table>
+</section>

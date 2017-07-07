@@ -23,9 +23,46 @@
           <dt>Price</dt>
           <dd><%= @product.price %></dd>
         </dl>
-      </div>
+  </article>
+   </div>
+      <% if session[:user_id] %>
+        <% if Review.where(product_id:@product.id).where(user_id:session[:user_id]).count == 0 %>
+        <div>
+          <h2>Add a review:</h2>
+          <%= form_for([@product, @product.reviews.build]) do |f| %>
+            <div>
+              <%= f.label :rating %>
+              <%= f.select :rating, [['5',5],['4',4],['3',3],['2',2],['1',1]]%>
+            </div>
+            <p>
+              <%= f.label :description %><br>
+              <%= f.text_area :description %>
+            </p>
+            <p>
+              <%= f.submit %>
+            </p>
+          <% end %>
+        </div>
+        <% else %>
+          <p> You've already reviewed this product </p>
+        <% end %>
+      <% end %>
     </div>
 
-  </article>
+    <h2>Reviews</h2>
+    <h4>Average rating <%= @avg_rating %></h4>
+    <div>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Rating</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= render @reviews %>
+          </tbody>
+        </table>
+      </div>
 
 </section>

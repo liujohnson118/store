@@ -5,11 +5,15 @@ class UsersController < ApplicationController
 
   def create
     user = User.new(user_params)
-    if user.save
-      session[:user_id] = user.id
-      redirect_to '/'
+    if User.where(email:user.email).count<1
+      if user.save
+        session[:user_id] = user.id
+        redirect_to '/'
+      else
+        redirect_to '/signup'
+      end
     else
-      redirect_to '/signup'
+      raise ActionController::RoutingError.new('Error creating user profile. User email already exists! Choose a different email')
     end
   end
   private

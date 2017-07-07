@@ -1,13 +1,8 @@
 class UserMailer < ApplicationMailer
-  default from: 'junglerail@yahoo.com'
-  # Subject can be set in your I18n file at config/locales/en.yml
-  # with the following lookup:
-  #
-  #   en.user_mailer.order_confirmation.subject
-  #
-  def order_confirmation
-    @greeting = "Hi"
+  default from: 'no-reply@jungle.com'
 
-    mail to: "junglerail@yahoo.com"
+  def order_confirmation(email,items)
+    @line_items=items
+    mail to: email, subject: 'Jungle order confirmation'
   end
 end

@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
 
+  resources :products do
+    resources :reviews
+  end
+
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
 
@@ -12,6 +16,10 @@ Rails.application.routes.draw do
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
 
+
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: "/letter_opener"
+  end
 
   resource :cart, only: [:show] do
     put    :add_item
