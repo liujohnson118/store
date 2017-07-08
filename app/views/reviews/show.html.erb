@@ -1,0 +1,15 @@
+<section class="user_reviews-show">
+  <table class="table table-bordered">
+
+      <tr>
+        <th>Rating</th>
+        <th>Product Name</th>
+        <th>Description</th>
+        <th>Action</th>
+      </tr>
+
+    <tbody>
+      <%= render partial: "user_review", collection: @user_reviews %>
+    </tbody>
+  </table>
+</section>

@@ -5,4 +5,12 @@
 <td>
 <%= review.description %></p>
 </td>
+<td>
+  <% if session[:user_id] == review.user_id %>
+    <%= link_to 'Delete Review', '/reviews/'+review.id.to_s,
+              method: :delete,
+              data: { confirm: 'Are you sure to delete this review?' } %>
+  <% else %>
+  <% end %>
+</td>
 <tr>

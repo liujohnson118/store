@@ -1,0 +1,16 @@
+<tr>
+<td>
+<%= user_review.rating %>
+</td>
+<td>
+  <%= Product.find(user_review.product_id).name %>
+</td>
+<td>
+<%= user_review.description %></p>
+</td>
+<td>
+<%= link_to 'Delete Review', '/reviews/'+user_review.id.to_s,
+              method: :delete,
+              data: { confirm: 'Are you sure to delete this review?' } %>
+</td>
+<tr>

@@ -13,7 +13,19 @@ class ReviewsController < ApplicationController
   end
 
   def index
-    @reviews = @Review.where(product_id: params[:product_id]).order(created_at: :desc)
+    @reviews = Review.where(product_id: params[:product_id]).order(created_at: :desc)
+  end
+
+  def show
+    @user_reviews=Review.where(user_id: session[:user_id]).order(created_at: :desc)
+  end
+
+  def destroy
+    @review_to_delete=Review.find(params[:id])
+    @product=Product.find(@review_to_delete.product_id)
+    @review_to_delete.destroy
+    puts "FUCCKKKKK #{@product.id}"
+    redirect_to '/products/'+@product.id.to_s
   end
   private
     def review_params
