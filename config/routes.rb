@@ -18,6 +18,7 @@ Rails.application.routes.draw do
 
   get '/reviews' => 'reviews#show'
   delete '/reviews/:id/' => 'reviews#destroy'
+  get '/allUsers' => 'users#index'
 
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"

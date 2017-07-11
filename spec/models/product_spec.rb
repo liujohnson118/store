@@ -31,7 +31,6 @@ RSpec.describe Product, type: :model do
       my_bike = @category.products.new(name: 'Giant', price: 150, quantity: 1)
       my_bike.save
       expect(my_bike[:name].length).to be > 1
-      puts "FUCKKK #{my_bike.price}"
       expect(my_bike.price).to eql(150)
       expect(my_bike.quantity).to eql(1)
     end

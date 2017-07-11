@@ -10,7 +10,6 @@ class CartsController < ApplicationController
     item["quantity"] += 1
     cart[product_id] = item
     update_cart cart
-
     redirect_to :back
   end
 
@@ -22,7 +21,6 @@ class CartsController < ApplicationController
     cart[product_id] = item
     cart.delete(product_id) if item["quantity"] < 1
     update_cart cart
-
     redirect_to :back
   end
 
