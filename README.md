@@ -55,3 +55,11 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 9. The user can also see a list of all reviews on an item. If a review was posted by the current the user, the user will have a link to delete that particular review. The user can also access all his/her reviews by clicking "Your Reviews" on the nav bar.
 !["Screenshot of reviews"](https://github.com/liujohnson118/jungle-rails/blob/master/docs/reviewed.png)
 !["Screenshot of all reviews"](https://github.com/liujohnson118/jungle-rails/blob/master/docs/reviews.png)
+
+#### Admin
+
+1. To access the admin control pannel, click Admin on the top right corner. Use "Admin" as both the username and password.
+2. Once logged in, the admin can create new categories.
+!["Screenshot of new category"](https://github.com/liujohnson118/jungle-rails/blob/master/docs/categories.png)
+3. Once logged in, the admin can create new products to sell with an image attached to it.
+!["Screenshot of new product"](https://github.com/liujohnson118/jungle-rails/blob/master/docs/products.png)
