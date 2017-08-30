@@ -43,5 +43,13 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 2. The user can login to Jungle after creating an account.
 3. Once logged in, the user can add items to the shopping cart and the shopping cart will be updated automatically. The shopping cart can be accessed by clicking "My Cart" on the top right corner. If the item is sold out, the label "Sold Out" will be displayed on the item, otherwise, the price will be displayed.
 4. The user can increase or decrease the quantity of a product by accessing the shopping cart on the top right corner.
-!["Screenshot of homepage"](https://github.com/liujohnson118/jungle-rails/blob/master/docs/cart.png)
+!["Screenshot of cart"](https://github.com/liujohnson118/jungle-rails/blob/master/docs/cart.png)
 5. When the user is done selecting items to buy, the checkout process can begin by clicking "Pay with Card".
+!["Screenshot of pay"](https://github.com/liujohnson118/jungle-rails/blob/master/docs/pay.png)
+6. For testing, use credit card # 4111 1111 1111 1111 for testing success scenarios. Use an expirary date later than the current month and any 111 for CVV.
+!["Screenshot of paid"](https://github.com/liujohnson118/jungle-rails/blob/master/docs/paid.png)
+7. At the end, an email containing the details of the order will be sent to the user's email. For now, this e-mail is not actually sent, but is viewable as a simulation on http://localhost:3000/letter_opener.
+!["Screenshot of confirmation email"](https://github.com/liujohnson118/jungle-rails/blob/master/docs/letter_opener.png)
+8. If logged in, the user can also write review to an item by giving it a rating and a description.
+!["Screenshot of confirmation review"](https://github.com/liujohnson118/jungle-rails/blob/master/docs/review.png)
+
