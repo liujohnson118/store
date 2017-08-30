@@ -2,7 +2,7 @@
 
 A mini e-commerce application built with Rails
 
-!["Screenshot of homepage"](https://github.com/liujohnson118/jungle-rails/tree/master/docs/hompage.png)
+!["Screenshot of homepage"](https://github.com/liujohnson118/jungle-rails/blob/master/docs/homepage.png)
 
 ## Setup
 
