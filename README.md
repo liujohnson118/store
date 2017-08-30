@@ -41,4 +41,7 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 #### Users (Shoppers)
 1. The user can create an account using his/her first and last names, email address, and a password. The password is stored after being hashed.
 2. The user can login to Jungle after creating an account.
-3.
+3. Once logged in, the user can add items to the shopping cart and the shopping cart will be updated automatically. The shopping cart can be accessed by clicking "My Cart" on the top right corner. If the item is sold out, the label "Sold Out" will be displayed on the item, otherwise, the price will be displayed.
+4. The user can increase or decrease the quantity of a product by accessing the shopping cart on the top right corner.
+!["Screenshot of homepage"](https://github.com/liujohnson118/jungle-rails/blob/master/docs/cart.png)
+5. When the user is done selecting items to buy, the checkout process can begin by clicking "Pay with Card".
